@@ -1,0 +1,13 @@
+interface AudioBuffer {
+    attribute unsigned long length;
+    attribute any samples;
+};
+
+interface AudioBufferWrapper {
+    void AudioBufferWrapper();
+    any array_alloc(unsigned long length);
+    AudioBuffer alloc(unsigned long length);
+    void clear(AudioBuffer buffer);
+    void fill(AudioBuffer buffer, float value);
+    void print(AudioBuffer buffer);
+};
